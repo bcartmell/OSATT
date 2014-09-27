@@ -1,5 +1,5 @@
 libs/
 public/libs/*
-app/parsers/*
+app/OSATT-CAD-parsing/*
 .*.swp
 .*.swo
