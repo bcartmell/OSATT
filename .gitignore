@@ -1,0 +1,5 @@
+libs/
+public/libs/*
+app/parsers/*
+.*.swp
+.*.swo
