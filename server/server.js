@@ -1,3 +1,4 @@
+'use strict'
 var sys = require("sys"),
 http = require("http"),
 path = require("path"),
