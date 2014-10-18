@@ -8,7 +8,7 @@ mime = require("./serverModules/mime.js");
 
 var listenOnPort = 8080;
 
-http.createServer(function(request,response){
+var server = http.createServer(function(request,response){
 	var requestedPath = url.parse(request.url).pathname;
   if (requestedPath == "/") {
     requestedPath = "html/item.html";
@@ -32,7 +32,7 @@ http.createServer(function(request,response){
 				 else{
 
           var ext = full_path.split('.').pop();
-          responseType = mime.mimeType[ext];
+          var responseType = mime.mimeType[ext];
 
           if (responseType === undefined)
               responseType = "text/plain";
@@ -46,5 +46,14 @@ http.createServer(function(request,response){
 		}
 	});
 }).listen(listenOnPort);
+
+server.on('connection', function(sock) {
+  console.log('');
+  console.log('');
+  console.log('connection established:');
+  console.log('');
+  console.log(sock.remoteAddress);
+});
+
 sys.puts("Server Running on " + listenOnPort);			
 
