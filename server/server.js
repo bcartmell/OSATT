@@ -8,8 +8,19 @@ mime = require("./serverModules/mime.js");
 
 var listenOnPort = 8080;
 
+function postHandler(request, response) {
+  request.on('data', function(data) {
+    console.log('received post data: \n'+ data);
+  });
+}
+
 var server = http.createServer(function(request,response){
 	var requestedPath = url.parse(request.url).pathname;
+
+  if (request.method === 'POST') {
+    postHandler(request, response);
+  }
+
   if (requestedPath == "/") {
     requestedPath = "html/item.html";
   }
@@ -56,4 +67,3 @@ server.on('connection', function(sock) {
 });
 
 sys.puts("Server Running on " + listenOnPort);			
-
