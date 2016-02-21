@@ -3,3 +3,4 @@ public/libs/*
 app/OSATT-CAD-parsing/*
 .*.swp
 .*.swo
+*.log
