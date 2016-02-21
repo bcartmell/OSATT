@@ -1,0 +1,20 @@
+{
+  "name": "OSATT",
+  "version": "0.0.0",
+  "description": "For sharing and collaborating on open source hardware.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bcartmell/OSATT.git"
+  },
+  "keywords": [
+  ],
+  "author": "Brady Cartmell",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/bcartmell/OSATT/issues"
+  }
+}
